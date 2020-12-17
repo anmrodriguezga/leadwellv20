@@ -1,0 +1,14 @@
+axis_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50.0
+
+# Position Controllers ------------------------------
+x_axis_position_controller:
+  type: position_controllers/JointPositionController
+  joint: xaxis
+y_axis_position_controller:
+  type: position_controllers/JointPositionController
+  joint: yaxis
+z_axis_position_controller:
+  type: position_controllers/JointPositionController
+  joint: zaxis

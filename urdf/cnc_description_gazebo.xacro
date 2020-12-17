@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="leadwellV20">
+
+    <xacro:include filename="$(find leadwellV20)/urdf/links_joints.xacro"/>
+    <xacro:include filename="$(find leadwellV20)/urdf/robot_parameters.xacro"/>
+    
+    <link name="world"/>
+
+    <joint name="fixed" type="fixed">
+        <parent link="world"/>
+        <child link="${link0_name}"/>
+    </joint>
+    
+    <xacro:link_macro name="${link0_name}"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0"
+        meshfile_visual="package://leadwellV20/meshes/bastidor.stl"
+        color="gray"
+        r="${188/255}"
+        g="${188/255}"
+        b="${188/255}"
+        meshfile_col="package://leadwellV20/meshes/bastidor.stl"
+        mass="1182"
+        ixx="355.62" ixy="0.0" ixz="-55"
+        iyy="376.16" iyz="0.0"
+        izz="104.89"
+        material="Gazebo/DarkGrey"
+    />
+
+    <xacro:joint_macro name="${joint1_name}"
+        type="prismatic"
+        parent_link="${link0_name}"
+        child_link="${link1_name}"
+        axis="0 0 1"
+        lower="-0.5"
+        upper="0.0"
+        vel="50.0"
+        effort="1000.0"
+        origin_xyz="0.0505 0 0.855"
+        origin_rpy="0 0 0"
+    />
+
+    <xacro:link_macro name="${link1_name}"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0"
+        meshfile_visual="package://leadwellV20/meshes/ejez.stl"
+        color="blue"
+        r="${0/255}"
+        g="${0/255}"
+        b="${255/255}"
+        meshfile_col="package://leadwellV20/meshes/ejez.stl"
+        mass="438"
+        ixx="38.2" ixy="0.265" ixz="0.749"
+        iyy="35.28" iyz="-0.279"
+        izz="16.23"
+        material="Gazebo/Blue"
+    />
+
+    <xacro:joint_macro name="${joint2_name}"
+        type="prismatic"
+        parent_link="${link0_name}"
+        child_link="${link2_name}"
+        axis="0 1 0"
+        lower="-0.175"
+        upper="0.175"
+        vel="50.0"
+        effort="1000.0"
+        origin_xyz="0 0 0.11"
+        origin_rpy="0 0 0"
+    />
+
+    <xacro:link_macro name="${link2_name}"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0"
+        meshfile_visual="package://leadwellV20/meshes/ejey.stl"
+        color="green"
+        r="${0/255}"
+        g="${255/255}"
+        b="${0/255}"
+        meshfile_col="package://leadwellV20/meshes/ejey.stl"
+        mass="50.2"
+        ixx="0.72" ixy="0.0" ixz="0.0"
+        iyy="2.31" iyz="0.0"
+        izz="2.98"
+        material="Gazebo/Green"
+    />
+
+    <xacro:joint_macro name="${joint3_name}"
+        type="prismatic"
+        parent_link="${link2_name}"
+        child_link="${link3_name}"
+        axis="1 0 0"
+        lower="-0.255"
+        upper="0.255"
+        vel="50.0"
+        effort="1000.0"
+        origin_xyz="0 -0.025 0.235"
+        origin_rpy="0 0 0"
+    />
+
+    <xacro:link_macro name="${link3_name}"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0"
+        meshfile_visual="package://leadwellV20/meshes/ejex.stl"
+        color="red"
+        r="${255/255}"
+        g="${0/255}"
+        b="${0/255}"
+        meshfile_col="package://leadwellV20/meshes/ejex.stl"
+        mass="260"
+        ixx="41.38" ixy="0.0" ixz="0.129"
+        iyy="3.95" iyz="0.0"
+        izz="43.92"
+        material="Gazebo/Red"
+    />
+
+    <!-- Gazebo Plugin -->
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"></plugin>
+    </gazebo>
+
+</robot>
