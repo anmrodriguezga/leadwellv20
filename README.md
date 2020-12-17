@@ -26,3 +26,5 @@ Descripción del gemelo virtual controlado a través de conexión ROS - MATLAB -
 4. Desde el bash, ejecutar el siguiente comando\
     `roslaunch leadwellV20 spawn.launch`\
    para ejecutar el gemelo virtual en Gazebo.
+
+![Interfaz gráfica de control de MATLAB junto a interfaz de Gazebo.](gui.png)
