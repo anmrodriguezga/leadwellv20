@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
+    <xacro:property name="link0_name" value="frame"/>
+    <xacro:property name="link1_name" value="xAxis"/>
+    <xacro:property name="link2_name" value="yAxis"/>
+    <xacro:property name="link3_name" value="zAxis"/>
+
+    <xacro:property name="joint1_name" value="zaxis"/>
+    <xacro:property name="joint2_name" value="yaxis"/>
+    <xacro:property name="joint3_name" value="xaxis"/>
+
+</robot>

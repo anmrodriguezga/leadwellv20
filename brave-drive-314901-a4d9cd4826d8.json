@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "brave-drive-314901",
+  "private_key_id": "a4d9cd4826d8c00bc4e981b159f5e211ebfef213",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCXveoCeR6hFSrR\ni2SKLyqHucjMi3D0uH2wFe9xHM3ErDip/HEwYB5ZgN9AEmlEQ+aTL2W8ciuIlj7R\nH7ST+igpjwpuEq1csmcxvqTm4Gsb0CEaFwx06YLuav4kvoOMXMraCOAdPOUwdVj0\ngNz3RsO5LrrlHIr6sHrFQ2qpx7J/BbNI90kwuJCJ1MqqZzEIRBZzzx6Z6RWmMptj\nFWo0GO+3jth6LTjFKq9GaS7ebCTqsvy6F60lQP4xyHACbyu9cB35WB+UicSys6Q7\nIYg3QVCWoVxM0SCHWZg+jF110zLqDmJsG8jmfU6inBQz+F4TkelH38F1fmahxDp2\nSJA3KPAlAgMBAAECggEAQtfkjTlYnkHqTktWuy6C0C4tf7lPRWY968MF6rBzDleF\nUJBFNjepNuk3rwxNNcapfB3NdaFffvgcbNfIHsV8Sq5ZvFpa5vIp1jZygsfKNwLM\niicsFBZHWIpmML6ByWOY8kolm4uXNG0FBhP8Aqu4DUvCBao4qKz0MBB+HJM9FIm7\nHFaKf4CN8kAVwxe3QKSXxxaHgLm0BgsGB8IZH0R9MiKrG3kxn+BPRhUthQ0eETn+\ntnCH6+BezZ6cAurdSMPf2WjzIDusrTq2J8bG50Pu/7IDhRKij/lXQL/WTAjyBLzD\nzy8zziSrRxj6FyZ1BTlJsYVnhijsZ58awE5QrBm5EwKBgQDJcMi43PQQlIne21+K\nI5+xLVXbi3EL8Y4qPwyGQdvM7IjkWv8xTuNZzXfTo8l6UFlwVB8fG53f6DyE4JB9\nxP8LYxTinICzRt+IOONqX+i6Gqi0FS3bXUX4E1AOkWHQ9ZBUEcr+hbi/q6gZcRGf\n7UbPjzOIEqb6VvYrBRvWEA47owKBgQDA1y/4gaySRXIUcUGiJVYYq//RAUo8MMTg\n6tsjwOLEhGmipWL3mhYOT9DY5IR/h82KSLS/Ej2Q8/DKGcU+7jz9Bw8USsZ6esn7\n15BjNhDKM+e1nGSsYYfGQ0iNw5UPfX4b3gdb4/QkYSb70eMQ0K3wMTLk8wS7Gyak\nq2A6z9lhlwKBgQCWr0d3AdGQlYyMqI1PSFassr0G/cgSpx8xevhjdeB16np8V5WN\nzPVEt+5q4ppUZMaCwGqHWqE+XProaxOrATHH0tZMrcWYVevgeq2jZRsyG78W9sDW\n127/o3K/cwE4znioaqbuvhj1R/L3FR2aBGRz3ystHsbJfUOn6qpn9pqvAQKBgFrm\n1QESt3N38u+595NkgDI/Gea+8exvnM7dRpGTAhJazKTTy1QmOVFjxHIJPoATVwth\nfHo5MfZbV10dSsKAcRVhN3V8ThU8PmxN0A1EViPK1eXhI/+yNdt6qf/RezmDEWg3\ngEaLrPFdLpAz/xJVHDkGKBSOjeNZSB0Ff+YZRkJfAoGAJolfHVq8qWpX7jneHnVU\nr74r93DAHY6b1TJN9LJ0dhKzkAN2uj3OJ8Ah471F9MFjeepGSNdabfGn1FWsi+bM\nJPH3vxdyztPRle/9uhwyCW/eOgXgtYzQoWc17zWJ/vFMvDFylkEWxk0FANyh2DMa\ntxbiIDGH02NIZS6O8uj5CAg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "leadwellv20@brave-drive-314901.iam.gserviceaccount.com",
+  "client_id": "114408351109933344632",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/leadwellv20%40brave-drive-314901.iam.gserviceaccount.com"
+}

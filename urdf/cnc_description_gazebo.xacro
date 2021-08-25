@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="leadwellv20">
+
+    <xacro:include filename="$(find leadwellv20)/urdf/links_joints.xacro"/>
+    <xacro:include filename="$(find leadwellv20)/urdf/cnc_parameters.xacro"/>
+    
+    <link name="world"/>
+
+    <joint name="fixed" type="fixed">
+        <parent link="world"/>
+        <child link="${link0_name}"/>
+        <origin xyz="0.0 0.0 0.685" rpy="0.0 0.0 0.0"/>
+    </joint>
+    
+    <xacro:link_macro name="${link0_name}"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0"
+        meshfile_visual="package://leadwellv20/meshes/frame.stl"
+        color="gray"
+        r="${87/255}"
+        g="${140/255}"
+        b="${185/255}"
+        meshfile_col="package://leadwellv20/meshes/frame.stl"
+        mass="1182"
+        ixx="355.62" ixy="0.0" ixz="-55"
+        iyy="376.16" iyz="0.0"
+        izz="104.89"
+        material="Gazebo/DarkGrey"
+    />
+
+    <xacro:joint_macro name="${joint1_name}"
+        type="prismatic"
+        parent_link="${link0_name}"
+        child_link="${link1_name}"
+        axis="0 0 1"
+        lower="-0.5"
+        upper="0.0"
+        vel="50.0"
+        effort="1000.0"
+        origin_xyz="0 0 0.85"
+        origin_rpy="0 0 0"
+    />
+
+    <xacro:link_macro name="${link1_name}"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0"
+        meshfile_visual="package://leadwellv20/meshes/zAxisWithTool.stl"
+        color="blue"
+        r="${0/255}"
+        g="${0/255}"
+        b="${255/255}"
+        meshfile_col="package://leadwellv20/meshes/zAxis.stl"
+        mass="438"
+        ixx="38.2" ixy="0.265" ixz="0.749"
+        iyy="35.28" iyz="-0.279"
+        izz="16.23"
+        material="Gazebo/Blue"
+    />
+
+    <xacro:joint_macro name="${joint2_name}"
+        type="prismatic"
+        parent_link="${link0_name}"
+        child_link="${link2_name}"
+        axis="0 1 0"
+        lower="-0.175"
+        upper="0.175"
+        vel="50.0"
+        effort="1000.0"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0"
+    />
+
+    <xacro:link_macro name="${link2_name}"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0"
+        meshfile_visual="package://leadwellv20/meshes/yAxis.stl"
+        color="green"
+        r="${0/255}"
+        g="${255/255}"
+        b="${0/255}"
+        meshfile_col="package://leadwellv20/meshes/yAxis.stl"
+        mass="50.2"
+        ixx="0.72" ixy="0.0" ixz="0.0"
+        iyy="2.31" iyz="0.0"
+        izz="2.98"
+        material="Gazebo/Green"
+    />
+
+    <xacro:joint_macro name="${joint3_name}"
+        type="prismatic"
+        parent_link="${link2_name}"
+        child_link="${link3_name}"
+        axis="1 0 0"
+        lower="-0.255"
+        upper="0.255"
+        vel="50.0"
+        effort="1000.0"
+        origin_xyz="0 0 0.22"
+        origin_rpy="0 0 0"
+    />
+
+    <xacro:link_macro name="${link3_name}"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0"
+        meshfile_visual="package://leadwellv20/meshes/xAxis.stl"
+        color="red"
+        r="${255/255}"
+        g="${0/255}"
+        b="${0/255}"
+        meshfile_col="package://leadwellv20/meshes/xAxis.stl"
+        mass="260"
+        ixx="41.38" ixy="0.0" ixz="0.129"
+        iyy="3.95" iyz="0.0"
+        izz="43.92"
+        material="Gazebo/Red"
+    />
+
+    <xacro:joint_macro name="juntaBase"
+        type="prismatic"
+        parent_link="${link3_name}"
+        child_link="pieza"
+        axis="1 0 0"
+        lower="-0.255"
+        upper="0.255"
+        vel="50.0"
+        effort="1000.0"
+        origin_xyz="0.137 0.082 0.135"
+        origin_rpy="0 0 1.5707"
+    />
+
+    <xacro:link_macro name="pieza"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0"
+        meshfile_visual="package://leadwellv20/meshes/placaSanta.stl"
+        color="gray"
+        r="${87/255}"
+        g="${140/255}"
+        b="${185/255}"
+        meshfile_col="package://leadwellv20/meshes/placaSanta.stl"
+        mass="1182"
+        ixx="355.62" ixy="0.0" ixz="-55"
+        iyy="376.16" iyz="0.0"
+        izz="104.89"
+        material="Gazebo/DarkGrey"
+    />
+
+    
+
+    <!-- Gazebo Plugin -->
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"></plugin>
+    </gazebo>
+
+</robot>
